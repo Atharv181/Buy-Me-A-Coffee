@@ -53,9 +53,9 @@ async function main() {
 
   // Buy the owner a few coffees.
   const tip = {value: hre.ethers.utils.parseEther("1")};
-  await buyMeACoffee.connect(tipper).buyCoffee("Carolina", "You're the best!", tip);
-  await buyMeACoffee.connect(tipper2).buyCoffee("Vitto", "Amazing teacher", tip);
-  await buyMeACoffee.connect(tipper3).buyCoffee("Kay", "I love my Proof of Knowledge", tip);
+  await buyMeACoffee.connect(tipper).buyCoffee("Atharv", "Hello I am Atharv!", tip);
+  await buyMeACoffee.connect(tipper2).buyCoffee("Pankaj", "Hello I am Pankaj!", tip);
+  await buyMeACoffee.connect(tipper3).buyCoffee("Suraj", "Hello I am Suraj!", tip);
 
   // Check balances after the coffee purchase.
   console.log("== bought coffee ==");

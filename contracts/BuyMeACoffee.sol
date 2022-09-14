@@ -2,6 +2,7 @@
 
 pragma solidity ^0.8.4;
 
+//BuyMeACoffee deployed to: 0x738095015Aa483067D2b98b77df9e47C20d0BE66 on goerli network
 
 contract BuyMeACoffee {
     // Event to emit when a Memo is created.
@@ -30,7 +31,7 @@ contract BuyMeACoffee {
         owner = payable(msg.sender);
     }
 
-    function buyCoffe(string memory _name, string memory _message) payable public {
+    function buyCoffee(string memory _name, string memory _message) payable public {
         require(msg.value > 0 ,"Can't buy coffee with 0 ETH");
         // Add the memo to storage 
         memos.push(Memo(
