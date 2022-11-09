@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import Head from 'next/head'
 import Image from 'next/image'
 import React, { useEffect, useState } from "react";
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   // Contract Address & ABI
@@ -169,7 +169,7 @@ export default function Home() {
       <Head>
         <title>Buy Atharv a Coffee!</title>
         <meta name="description" content="Tipping site" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className={styles.main}>
@@ -178,41 +178,44 @@ export default function Home() {
         </h1>
 
         {currentAccount ? (
-          <div>
+          <div className={styles.form}>
             <form>
-              <div>
-                <label>
+              <div style={{display: "flex"}}>
+                <label className = {styles.label}>
                   Name
                 </label>
-                <br />
+             
 
                 <input
                   id="name"
                   type="text"
-                  placeholder="anon"
+                  placeholder="Enter your name"
                   onChange={onNameChange}
+                  className={styles.input}
                 />
               </div>
               <br />
-              <div>
-                <label>
-                  Send Atharv a message
+              <div style={{display: "flex"}}>
+                <label className = {styles.label}>
+                  Message
                 </label>
                 <br />
 
                 <textarea
                   rows={3}
-                  placeholder="Enjoy your coffee!"
+                  placeholder="Enjoy your coffee & send a message to Atharv :)"
                   id="message"
                   onChange={onMessageChange}
                   required
+                  className={styles.input2}
                 >
                 </textarea>
               </div>
-              <div>
+              <div style={{marginTop:"20px",display:"flex",justifyContent:"center"}}>
                 <button
                   type="button"
                   onClick={buyCoffee}
+            
                 >
                   Send 1 Coffee for 0.001ETH
                 </button>
@@ -236,14 +239,10 @@ export default function Home() {
       }))}
 
       <footer className={styles.footer}>
-        <a
-          href="https://alchemy.com/?a=roadtoweb3weektwo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Created by @thatguyintech for Alchemy's Road to Web3 lesson two!
-        </a>
+        
+        Created by Atharv Bobade       
       </footer>
     </div>
   )
 }
+
