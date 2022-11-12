@@ -180,12 +180,10 @@ export default function Home() {
         {currentAccount ? (
           <div className={styles.form}>
             <form>
-              <div style={{display: "flex"}}>
+              <div >
                 <label className = {styles.label}>
                   Name
-                </label>
-             
-
+                </label>             
                 <input
                   id="name"
                   type="text"
@@ -195,7 +193,7 @@ export default function Home() {
                 />
               </div>
               <br />
-              <div style={{display: "flex"}}>
+              <div >
                 <label className = {styles.label}>
                   Message
                 </label>
@@ -203,19 +201,19 @@ export default function Home() {
 
                 <textarea
                   rows={3}
-                  placeholder="Enjoy your coffee & send a message to Atharv :)"
+                  placeholder="Send a message to Atharv :)"
                   id="message"
                   onChange={onMessageChange}
                   required
-                  className={styles.input2}
+                  className={styles.input}
                 >
                 </textarea>
               </div>
-              <div style={{marginTop:"20px",display:"flex",justifyContent:"center"}}>
+              <div style={{display:"flex",justifyContent:"center"}}>
                 <button
                   type="button"
                   onClick={buyCoffee}
-            
+                  className={styles.btn}
                 >
                   Send 1 Coffee for 0.001ETH
                 </button>
@@ -223,7 +221,7 @@ export default function Home() {
             </form>
           </div>
         ) : (
-            <button onClick={connectWallet}> Connect your wallet </button>
+            <button onClick={connectWallet} className={styles.btn} > Connect your wallet </button>
           )}
       </main>
 
@@ -231,18 +229,16 @@ export default function Home() {
 
       {currentAccount && (memos.map((memo, idx) => {
         return (
-          <div key={idx} style={{ border: "2px solid", "borderRadius": "5px", padding: "5px", margin: "5px" }}>
+          <div key={idx} style={{ border: "2px solid", width:"85%"  ,borderRadius: "10px", padding: "10px", margin: "5px" }}>
             <p style={{ "fontWeight": "bold" }}>"{memo.message}"</p>
             <p>From: {memo.name} at {memo.timestamp.toString()}</p>
           </div>
         )
       }))}
 
-      <footer className={styles.footer}>
-        
+      <footer className={styles.footer}>     
         Created by Atharv Bobade       
       </footer>
     </div>
   )
 }
-
