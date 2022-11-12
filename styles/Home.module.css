@@ -21,14 +21,21 @@
 
 .input{
   width: 100%;
-  height: 30px;
   margin-top: 5px;
-}
-.input2{
-  width: 100%;
-  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: #a5f5a5;
 }
 
+.btn{
+  margin-top: 42px;
+  padding: 9px;
+  border-radius: 10px;
+  border-style: dashed;
+  background-color: #6ac16a;
+  cursor: pointer;
+}
 .main {
   padding: 5rem 0;
   flex: 1;
@@ -140,4 +147,3 @@
     flex-direction: column;
   }
 }
-
