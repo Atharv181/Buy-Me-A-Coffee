@@ -218,6 +218,15 @@ export default function Home() {
                   Send 1 Coffee for 0.001ETH
                 </button>
               </div>
+              <div style={{display:"flex",justifyContent:"center"}}>
+                <button
+                  type="button"
+                  onClick={buyCoffee}
+                  className={styles.btn}
+                >
+                  Send 1 Big Coffee for 0.005ETH
+                </button>
+              </div>
             </form>
           </div>
         ) : (

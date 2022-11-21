@@ -17,5 +17,20 @@
   "devDependencies": {
     "eslint": "7",
     "eslint-config-next": "12.0.1"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "hardhat.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atharv181/Buy-Me-A-Coffee.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atharv181/Buy-Me-A-Coffee/issues"
+  },
+  "homepage": "https://github.com/Atharv181/Buy-Me-A-Coffee#readme"
 }
